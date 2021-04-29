@@ -1,13 +1,24 @@
 const express = require('express');
 const app = express();
 const port = 2121;
+const dotenv = require('dotenv')
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html')
-  console.log("It's working")
-})
+//set up ejs for views
+app.set("view engine", "ejs");
 
-app.post('/quotes', (req, res) => {
+//static folder
+app.use(express.static("public"))
+
+//parsing
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+//Routes
+//created index route
+app.use('/', require('./routes/index'))
+
+//move to posts.js in routes folder
+app.post('/posts', (req, res) => {
   console.log('Hellooooooooooooooooo!')
 })
 
