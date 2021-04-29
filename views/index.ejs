@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Social App</title>
+</head>
+<body class="bg-gray-100">
+    <h1 class="text-4xl mx-auto py-3 px-3">Welcome <i class="fas fa-comment-dots"></i></h1>
+
+    <section class="container mt-1 mx-auto px-3">
+        <section class="bg-white py-3 px-5 shadow rounded-lg">
+            <form action="/posts" method="POST">
+                <div class="">
+                    <input type="text" placeholder="name" name="name" required class="w-full border boder-gray-300 py-2 px-3 rounded-lg shadow-sm focus:outline-none focus:border-indigo-300">
+                </div>
+                <div class="mt-2">
+                    <input type="text" placeholder="post" name="post" required class="w-full border boder-gray-300 py-2 px-3 rounded-lg shadow-sm focus:outline-none focus:border-indigo-300">
+                </div>
+                <div class="">
+                    <button type="submit" class="bg-indigo-500 mt-3 hover:bg-indigo-400 text-white py-1 px-3 rounded">Submit</button>
+                </div>
+            </form>
+        </section>
+    </section>
+</body>
+</html>
