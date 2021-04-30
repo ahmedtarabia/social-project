@@ -8,7 +8,7 @@ const port = 2121;
 const dotenv = require('dotenv')
 
 //connect to MongoDB with connection string MH
-MongoClient.connect(`mongodb+srv://demo:demo@cluster0.ef5gs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{
+MongoClient.connect(`mongodb+srv://demo:<password>@cluster0.ef5gs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{
   useUnifiedTopology: true})
     .then(client => {
       console.log('Connected to Database')
